@@ -39,8 +39,9 @@ const Resister = () => {
                     {/*confirm password */}
                     <div className="mb-3 space-y-1">
                         <label htmlFor="confirm_password">Confirm Password<span className="text-red-500">*</span></label>
-                        <input type="password" className="w-full p-2 rounded" placeholder="Type here." {...register("confirm_password", { required: true })} />
+                        <input type="password" className="w-full p-2 rounded" placeholder="Type here." {...register("confirm_password", { required: true, manLength: "2" })} />
                         {errors.confirm_password?.type == 'required' && <p className="text-red-600 text-sm">confirm password is required</p>}
+                        {errors.confirm_password?.type == 'manLength' && <p className="text-red-600 text-sm">password doesn&apos;t mach</p>}
                     </div>
 
                     {/*Photo URL */}
