@@ -1,8 +1,10 @@
+import NavBar from "../sharePage/NavBar";
 
 const Main = () => {
     return (
-        <div>
-            Main
+        <div className="bg-white">
+            <NavBar />
+            <div className="h-screen"></div>
         </div>
     );
 };
